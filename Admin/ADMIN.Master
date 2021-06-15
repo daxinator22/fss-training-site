@@ -1,0 +1,135 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ADMIN.master.cs" Inherits="helloWorld.Admin.ADMIN" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Flight Services & Systems, LLC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Flight Services & Systems, LLC" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="~/assets/images/favicon.png">
+
+    <!-- App css -->
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"  />
+    <link href="~/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/app.min.css" rel="stylesheet" type="text/css"   />
+    <link href="~/assets/css/custom.css" rel="stylesheet" type="text/css"   />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body style="background-color: #fff;">
+
+    <form id="form1" runat="server">
+         <!-- Begin page -->
+        <div id="wrapper">
+
+            
+            <!-- Topbar Start -->
+            <div class="navbar-custom">
+                
+                <!-- LOGO -->
+                <div class="logo-box">
+                    <a href="index.html" class="logo text-center">
+                        <span class="logo-lg">
+                            <img src="/assets/images/logo-dark.png" alt="" height="50">
+                        </span>                        
+                    </a>
+                </div>
+
+            </div>
+            <!-- end Topbar -->    
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left-side-menu">
+
+                <div class="slimscroll-menu">
+
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+
+                        <ul class="metismenu" id="side-menu">
+
+                            <li class="active">
+                                <a href="/Admin/AdminHomePage.aspx">
+                                   <img style="width: 18px;margin-right: 10px;" src="/assets/images/home_icon.png"> <span> HOME </span>
+                                </a>
+                            </li>  
+                            <li>
+                                <a href="/Admin/upload/addUpload.aspx">
+                                   <img style="width: 18px;margin-right: 10px;" src="/assets/images/upload_icon.png"> <span> UPLOAD </span>
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="/Admin/Register/addRegister.aspx">
+                                   <img style="width: 18px;margin-right: 10px;" src="/assets/images/register_icon.png"> <span> REGISTER </span>
+                                </a>
+                            </li>    
+                            <li>
+                                <a href="/Admin/View/addView.aspx">
+                                   <img style="width: 18px;margin-right: 10px;" src="/assets/images/view_icon.png"> <span> VIEW </span>
+                                </a>
+                            </li>  
+                            <li>
+                                <a href="/Admin/ADD/CourseAssignToEmp.aspx">
+                                   <img style="width: 18px;margin-right: 10px;" src="/assets/images/assign_course_icon.png"> <span> ASSIGN COURSE </span>
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="/Admin/countSafetyBlt.aspx">
+                                   <img style="width: 18px;margin-right: 10px;" src="/assets/images/safety_bit_icon.png"> <span> SAFETY BIT</span>
+                                </a>
+                            </li>  
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <asp:LinkButton id="btnLogout" Text="Logout" OnClick="Button7_Click" runat="server"><img style="width: 18px;margin-right: 10px;" src="/assets/images/logout_icon.png" /><span> LOG OUT</span></asp:LinkButton>
+                                
+                            </li>  
+
+                
+                        </ul>
+
+                    </div>
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+
+                </div>
+                <!-- Sidebar -left -->
+
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page bg_color_class">
+                <div class="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <!-- Vendor js -->
+        <script src="/assets/js/vendor.min.js"></script>
+        <script src="/assets/js/pages/dashboard.init.js"></script>
+        <!-- App js -->
+        <script src="/assets/js/app.min.js"></script>
+    <asp:ContentPlaceHolder ID="CPH_Scripts" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

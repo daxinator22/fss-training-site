@@ -1,0 +1,62 @@
+.manage_airports {
+  /*font-family: Arial, Helvetica, sans-serif;*/
+  border-collapse: collapse;
+  width: 100%;
+      box-shadow: 0px 40px 40px 0px #d7dff7;
+      border-radius: 22px;
+}
+
+.manage_airports td, .manage_airports th {
+
+  padding: 8px;
+}
+
+/*#manage_airports tr:nth-child(even){background-color: #f2f2f2;}*/
+
+.manage_airports tr {background-color: #fff;}
+
+.manage_airports th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4662EF;
+    color: white;
+    padding-left: 50px;
+    padding-top: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.flot_left_class_ma {
+     float: none; 
+   /* margin-right: 35%;*/
+}
+
+tr:first-child th:first-child { border-top-left-radius: 22px; }
+tr:first-child th:last-child { border-top-right-radius: 22px; }
+tr:last-child td:first-child { border-bottom-left-radius: 22px; }
+tr:last-child td:last-child { border-bottom-right-radius: 22px; }
+
+
+.manage_airports tr td {
+    padding-left: 50px;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+}
+.manage_airports button.add_btn {
+    border-radius: 12px;
+    padding: 6px;
+    width: 61px;
+    background-color: #FF2A04;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    letter-spacing: 2px;
+    float: right;
+    margin-right: 82px;
+    margin-top: 0px;
+    box-shadow: 4px 3px 5px 2px #ff2a047a;
+}

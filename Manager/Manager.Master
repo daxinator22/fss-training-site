@@ -1,0 +1,240 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Manager.master.cs" Inherits="helloWorld.Manager.Manager" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Flight Services & Systems, LLC</title>
+    <link rel="shortcut icon" href="~/assets/images/favicon.png">
+
+    <!-- App css -->
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"  />
+    <link href="~/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/app.min.css" rel="stylesheet" type="text/css"   />
+    <link href="~/assets/css/custom.css" rel="stylesheet" type="text/css"   />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body style="background-color: #fff;">
+    <form id="form1" runat="server">
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            
+            <!-- Topbar Start -->
+            <div class="navbar-custom">
+                
+                <!-- LOGO -->
+                <div class="logo-box">
+                    <a href="index.html" class="logo text-center">
+                        <span class="logo-lg">
+                            <img src="/assets/images/logo-dark.png" alt="" height="50">
+                        </span>                        
+                    </a>
+                </div>
+
+            </div>
+            <!-- end Topbar -->    
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left-side-menu">
+
+                <div class="slimscroll-menu">
+
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+                      <center>  
+                          <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="#00CC00" Font-Size="X-Large"></asp:Label>
+                          <br />
+                          <asp:Label ID="Label7" runat="server" Font-Bold="False" ForeColor="Blue" Text="Station"></asp:Label>
+                          :
+                          <asp:Label ID="lvlStation" runat="server" Font-Bold="True" ForeColor="Blue" Text="Label"></asp:Label>
+                      </center><br />
+                        <ul class="metismenu" id="side-menu">
+
+                            <li class="active">
+                                <a href="/Manager/Default.aspx">
+                                   <img style="width: 18px;margin-right: 10px;" src="/assets/images/home_icon.png"> <span> HOME </span>
+                                </a>
+                            </li>  
+                            <li>
+                                <a href="/Manager/ManDash.aspx">
+                                   <img style="width: 18px;margin-right: 10px;" src="/assets/images/upload_icon.png"> <span> NON-COMPLIANT </span>
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="/Manager/Reset/ResetCourse.aspx">
+                                   <img style="width: 18px;margin-right: 10px;" src="/assets/images/register_icon.png"> <span> RESET COURSE </span>
+                                </a>
+                            </li>    
+                            <li>
+                                <a href="/Manager/RegisterEmployeeIn.aspx">
+                                   <img style="width: 18px;margin-right: 10px;" src="/assets/images/view_icon.png"> <span> REGISTER EMPLOYEE </span>
+                                </a>
+                            </li>  
+                            <li>
+                                <a href="/Manager/AssignCourse/AssignCourses.aspx">
+                                   <img style="width: 18px;margin-right: 10px;" src="/assets/images/assign_course_icon.png"> <span> ASSIGN COURSE </span>
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="/Manager/2activelist.aspx">
+                                   <img style="width: 18px;margin-right: 10px;" src="/assets/images/safety_bit_icon.png"> <span> EDIT EMPLOYEE </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Manager/UserSummary.aspx">
+                                   <img style="width: 18px;margin-right: 10px;" src="/assets/images/safety_bit_icon.png"> <span> USER SUMMARY </span>
+                                </a>
+                            </li>  
+                            
+                            <li>
+                                <asp:LinkButton id="btnLogout" Text="Logout" OnClick="Button11_Click" runat="server"><img style="width: 18px;margin-right: 10px;" src="/assets/images/logout_icon.png" /><span> LOG OUT</span></asp:LinkButton>
+                                
+                            </li>  
+
+                
+                        </ul>
+
+                    </div>
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+
+                </div>
+                <!-- Sidebar -left -->
+
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page bg_color_class">
+                <div class="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+        </div>
+        <%--<div id="mainn">
+            <div id="left">
+     <div id="leftmenu">
+         <table class="tbl">
+             <tr>
+                 <td>
+                     &nbsp;</td>
+             </tr>
+             <tr>
+                 <td style="text-align: center">
+                     <asp:Image ID="Image4" runat="server" Height="131px" Width="104px" ImageUrl="~/Image/manager.png" />
+                 </td>
+             </tr>
+             <tr>
+                 <td style="text-align: center">
+                     <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                     &nbsp;</td>
+             </tr>
+             <tr>
+                 <td>
+                    <asp:Button ID="Button12" runat="server" CssClass="btnmenu" Text="Home" 
+                        PostBackUrl="" OnClick="Button12_Click" />
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                    <asp:Button ID="Button1" runat="server" CssClass="btnmenu" Text="Non-Compliant" 
+                        PostBackUrl="" OnClick="Button1_Click" />
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                    <asp:Button ID="Button15" runat="server" CssClass="btnmenu" Text="Reset Course" 
+                        PostBackUrl="" OnClick="Button15_Click" />
+                 </td>
+             </tr>
+              <tr>
+                 <td>
+                    <asp:Button ID="Button2" runat="server" CssClass="btnmenu" Text="Register Employee" 
+                        PostBackUrl="" OnClick="Button5_Click" />
+                 </td>
+             </tr>
+             
+             <tr>
+                 <td>
+                    <asp:Button ID="Button3" runat="server" CssClass="btnmenu" Text="Assign Course" 
+                        PostBackUrl="" OnClick="Button5_Click" />
+                 </td>
+             </tr>
+             <!--
+              <tr>
+                 <td>
+                    <asp:Button ID="Button4" runat="server" CssClass="btnmenu" Text="Register Employee" 
+                        PostBackUrl="~/Manager/RegisterEmployee.aspx" OnClick="Button8_Click" />
+                 </td>
+             </tr>
+             
+             <tr>
+                 <td>
+                    <asp:Button ID="Button6" runat="server" CssClass="btnmenu" Text="Assign Course" 
+                        PostBackUrl="~/Manager/AssignCourse/AssignCourse.aspx" OnClick="Button6_Click" />
+                 </td>
+             </tr>
+             
+              -->
+             <tr>
+                 <td>
+                    <asp:Button ID="Button19" runat="server" CssClass="btnmenu" Text="Edit Employee Records" 
+                        PostBackUrl="" OnClick="Button19_Click"  />
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                    <asp:Button ID="btn_menu_UserSummary" runat="server" CssClass="btnmenu" Text="User Summary" 
+                        PostBackUrl=""  />
+                 </td>
+             </tr>
+            
+            
+             
+             <tr>
+                 <td>
+                    <asp:Button ID="Button11" runat="server" CssClass="btnmenu" Text="LOGOUT" 
+                         onclick="Button11_Click" />
+                 </td> 
+             </tr>
+              
+         </table>
+         </div>
+     </div>
+     <div id="right">  <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>    
+         </div>
+    </div> --%>
+    </form>
+
+     <!-- Vendor js -->
+        <script src="/assets/js/vendor.min.js"></script>
+        <script src="/assets/js/pages/dashboard.init.js"></script>
+        <!-- App js -->
+        <script src="/assets/js/app.min.js"></script>
+    <asp:ContentPlaceHolder ID="CPH_Scripts" runat="server">
+    </asp:ContentPlaceHolder>
+
+</body>
+</html>
+
